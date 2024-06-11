@@ -2,6 +2,8 @@
 Chart.defaults.backgroundColor = '';
 Chart.defaults.borderColor = '';
 Chart.defaults.color = '';
+// Chart.defaults.global.legend.display = false;
+
 
 function color(labels) {
     const borderColors = [];
@@ -23,17 +25,36 @@ new Chart(ctx, {
     data: {
         labels: ['mun', 'tue', 'wed', 'thu', 'fri', 'sat', 'sund'],
         datasets: [{
-            label: 'Daily',
+            // label: '',
             data: [17.45, 34.91, 52.36, 31.07, 23.39, 43.28, 25.48],
             borderWidth: 1,
             borderColor: color(['mun', 'tue', 'wed', 'thu', 'fri', 'sat', 'sund']), 
-            borderRadius:10,
+            borderRadius:7,
+            legend: {
+                display: false
+             }
         }]
     },
     options: {
         scales: {
             y: {
-                beginAtZero: true
+                beginAtZero: true,
+                border:{
+                    display:false, //pour enlever les axes
+                },
+                ticks:{
+                    display:false //enlever les valeurs de l'axe
+                }
+            },
+            x:{
+                border:{
+                    display:false
+                }
+            }
+        },
+        plugins:{
+            legend:{
+                display:false
             }
         }
     }
