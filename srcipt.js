@@ -23,7 +23,7 @@ new Chart(ctx, {
     data: {
         labels: ['mun', 'tue', 'wed', 'thu', 'fri', 'sat', 'sund'],
         datasets: [{
-            label: '',
+            label: 'Daily',
             data: [17.45, 34.91, 52.36, 31.07, 23.39, 43.28, 25.48],
             borderWidth: 1,
             borderColor: color(['mun', 'tue', 'wed', 'thu', 'fri', 'sat', 'sund']), 

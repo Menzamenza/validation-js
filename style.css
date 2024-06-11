@@ -3,6 +3,9 @@
     padding: 0;
     margin: 0;
 }
+.container-fluid{
+    height: 100vh;
+}
 .page{
     background-color: hsl(27, 66%, 92%);
 }
