@@ -22,11 +22,11 @@ const ctx = document.getElementById('myChart');
 new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: ['mun', 'tue', 'wed', 'thu', 'fri', 'sat', 'sund'],
+        labels: ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'],
         datasets: [{
             data: [17.45, 34.91, 52.36, 31.07, 23.39, 43.28, 25.48],
             borderWidth: 1,
-            borderColor: color(['mun', 'tue', 'wed', 'thu', 'fri', 'sat', 'sund']), 
+            borderColor: color(['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN']), 
             borderRadius:7,
             legend: {
                 display: false
