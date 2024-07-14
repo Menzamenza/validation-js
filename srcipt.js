@@ -8,11 +8,13 @@ function color(labels) {
     let today = new Date().getDay(); // Obtenir le jour actuel de la semaine (0 pour dimanche, 1 pour lundi)
 
     for (let i = 0; i < labels.length; i++) {
-        if (i === (today - 1 + 7) % 7) {
-            console.log(today);
+        if (today === 0 && i === labels.length - 1) {
+            // Si aujourd'hui est dimanche, change la couleur du dernier élément de la liste
+            borderColors.push("hsl(186, 34%, 60%)");
+        } else if (i === today - 1) {
             borderColors.push("hsl(186, 34%, 60%)");
         } else {
-            borderColors.push('hsl(10, 79%, 65%)');
+            borderColors.push("hsl(10, 79%, 65%)");
         }
     }
 
